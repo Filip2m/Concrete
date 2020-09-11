@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Concrete Strength</title>
+    <style>
+        p {
+            top: 5px;
+            bottom: 0px;
+            margin-bottom: 0px;
+        }
+
+        #submit_button {
+            margin-top: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .txt_field {
+            width: 200px;
+        }
+        
+        form {
+            width: 300px;
+            text-align: center;
+        }
+
+        #grade {
+            position: relative;
+            top: 5px;
+            font-size: 30px;
+        }
+
+        #grade_label {
+            font-size: 30px;
+        }
+
+        #description_label {
+            top: 5px;
+            font-size: 20px;
+        }
+
+        #grade_holder {
+            position: relative;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000px;
+        }
+        
+        td {
+            width: 500px;
+        }
+
+        body {
+            text-align: center;
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Concrete strength</h1>
+    <table>
+        <tr>
+            <td>
+                <form action="/" method="post">
+                    <div>
+                        <p>Cement (kg/m^3)</p>
+                        <input class="txt_field" type="text" name="Cement" value="0" />
+                    </div>
+                    <div>
+                        <p>Blast Furnace Slag (kg/m^3)</p>
+                        <input class="txt_field" type="text" name="Blast Furnace Slag" value="0" />
+                    </div>
+                    <div>
+                        <p>Fly Ash (kg/m^3)</p>
+                        <input class="txt_field" type="text" name="Fly Ash" value="0" />
+                    </div>
+                    <div>
+                        <p>Water (kg/m^3)</p>
+                        <input class="txt_field" type="text" name="Water" value="0" />
+                    </div>
+                    <div>
+                        <p>Superplasticizer (kg/m^3)</p>
+                        <input class="txt_field" type="text" name="Superplasticizer" value="0" />
+                    </div>
+                    <div>
+                        <p>Coarse Aggregate (kg/m^3)</p>
+                        <input class="txt_field" type="text" name="Coarse Aggregate" value="0" />
+                    </div>
+                    <div>
+                        <p>Fine Aggregate (kg/m^3)</p>
+                        <input class="txt_field" type="text" name="Fine Aggregate" value="0" />
+                    </div>
+                    <div>
+                        <p>Age (days)</p>
+                        <input class="txt_field" type="text" name="Age" value="0" />
+                    </div>
+                    <div>
+                        <p>Concrete compressive strength (MPa)</p>
+                        <input class="txt_field" type="text" name="Concrete compressive strength" value="0" />
+                    </div>
+                    <input id="submit_button" type="submit" value="Calculate"/>
+                </form>
+            </td>
+            <td>
+                <div id = 'grade_holder'>
+                    <p id = "grade_label">Concrete Strength:</p>
+                    <p id = "grade">{{grade}}</p>
+                    <p id = "description_label">low(0) medium(1) high(2)</p>
+                </div>
+            </td>
+        </tr>
+</table>
+</body>
+</html>
